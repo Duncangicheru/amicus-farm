@@ -1,0 +1,156 @@
+/* Set the background color for the entire page */
+body {
+    background-color: #D3A6E2; /* Light Purple */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the Add Sale section */
+.add-sale-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Fills the page width */
+    margin: 0 auto;
+    max-width: 1200px; /* Adds a max width for large screens */
+}
+
+/* Add Sale form styling */
+.add-sale-form {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: flex-start; /* Align items to the start */
+    width: 90%; /* Ensures the form takes full width of the container */
+    margin: 20px 0;
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Form field styling */
+.sale-form-field {
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px); /* Set flex-grow and flex-basis for responsive layout */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+/* Label styling */
+.sale-form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input field styling */
+.sale-form-field input {
+    width: 100%; /* Ensures input fields take full width of the container */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    padding: 8px;
+    border: 1px transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000; /* Black text */
+    font-weight: bold;
+    background-color: transparent;
+}
+
+/* Specific styles for Add Sale button */
+.add-sale-button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 30%;
+}
+
+.add-sale-button:hover {
+    background-color: #45a049;
+}
+
+/* Submit button styling */
+.add-sale-form button[type="submit"] {
+    width: 50%; /* Full width of the form */
+    height: 40px;
+    margin: 20px auto 0;
+    align-self: stretch;
+}
+
+/* Add space between the last input field and the submit button */
+.add-sale-form .sale-form-field:last-child {
+    margin-bottom: 20px;
+}
+
+/* Table styling for displaying added sales */
+.sale-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table headers and cells */
+.sale-table th,
+.sale-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+/* Header and row styling */
+.sale-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.sale-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.sale-table tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .sale-form-field {
+        flex: 1 1 100%; /* Stack fields on smaller screens */
+        min-width: unset;
+    }
+
+    .sale-table th, .sale-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .add-sale-button, .add-sale-form button[type="submit"] {
+        width: 100%; /* Full-width buttons on smaller screens */
+    }
+}
+
+/* Optional: responsive table scrolling for extra small screens */
+@media (max-width: 480px) {
+    .sale-table {
+        display: block;
+        overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    }
+}

@@ -1,0 +1,157 @@
+/* Set the background color for the entire page */
+body {
+    background-color: #D3A6E2; /* Light Purple */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the Add Goat section */
+.add-goat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Goat table styling */
+.goat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table headers and cells */
+.goat-table th,
+.goat-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Header and row styling */
+.goat-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.goat-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.goat-table tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Add Goat button styling */
+.add-goat-button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 30%; /* Matches width of form input fields */
+}
+
+.add-goat-button:hover {
+    background-color: #45a049;
+}
+
+/* Form styling */
+.add-goat-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Form field styling */
+.form-field {
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px); /* Set flex-grow and flex-basis for responsive layout */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+/* Input field styling */
+.form-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Stack fields on smaller screens */
+    .form-field {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+
+    /* Full-width form */
+    .add-goat-form {
+        flex-direction: column;
+    }
+
+    /* Make the table more compact on smaller screens */
+    .goat-table th, .goat-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Adjust the Add Goat button width */
+    .add-goat-button {
+        width: 100%; /* Full-width on smaller screens */
+    }
+
+    /* Adjust the form and table layout on mobile */
+    .goat-table {
+        font-size: 12px;
+    }
+
+    /* Adjusting button and input fields for better mobile experience */
+    .form-field input {
+        font-size: 14px;
+    }
+
+    /* Make the form field labels more readable */
+    .form-field label {
+        font-size: 14px;
+    }
+}
+
+/* Optional: Responsive table scrolling for very small devices */
+@media (max-width: 480px) {
+    .goat-table {
+        display: block;
+        overflow-x: auto; /* Horizontal scrolling for tables on extra small screens */
+    }
+}

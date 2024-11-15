@@ -1,0 +1,151 @@
+/* General styling for the signup form */
+.signup-container {
+  background-color: #D3A6E2; /* Light purple background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  justify-content: center; /* Align content in the center */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center; 
+  background-size: cover; /* Ensure the background color covers the full container */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Prevent repeating the background */
+  width: 100%; /* Ensure the container takes up the full width */
+}
+
+/* Center and style the heading */
+.signup-heading {
+  font-size: 3rem; /* Font size for the heading */
+  margin-top: 0; /* Top margin */
+  margin-bottom: 40px; /* Space between heading and form */
+  color: black;
+}
+
+/* Form container: stack form fields */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Ensure the form doesn't stretch too wide on large screens */
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for readability */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for a card-like effect */
+}
+
+/* Styling for each form row */
+.form-row {
+  display: flex;
+  align-items: center; /* Align labels and input fields horizontally */
+  margin-bottom: 9px; /* Reduced from 15px (40% less space) */
+  width: 100%; /* Full width within the container */
+  justify-content: space-between;
+}
+
+/* Style for input fields */
+.form-row input {
+  flex: 2; /* Input field takes up more space */
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  width: 90%; /* Set width to 90% to cover most of the container */
+  color: black;
+  transition: all 0.3s ease; /* Smooth transition for input field focus */
+}
+
+/* Placeholder text style */
+.form-row input::placeholder {
+  color: black;
+  opacity: 0.7; /* Adjust opacity of placeholder */
+}
+
+/* Add border color change on focus */
+.form-row input:focus {
+  outline: none;
+  border-color: #fd7e14; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(253, 126, 20, 0.5); /* Soft orange shadow on focus */
+}
+
+/* Adjust the spacing between the last input and the signup button */
+.form-container .form-row:last-child {
+  margin-bottom: 9px; /* Reduce space by 40% */
+}
+
+/* Styling for the button */
+.button-row {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Full width to align with the input fields */
+  margin-top: 10px; /* Reduce margin between last input and button */
+}
+
+/* Submit button styling */
+.input-submit {
+  background-color: #fd7e14; /* Orange button */
+  color: white;
+  font-size: 1.6rem; /* Increased font size */
+  padding: 13px 26px; /* Increased padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 32.5%; /* Increased width by 30% */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.input-submit:hover {
+  background-color: #e06a12; /* Slightly darker orange on hover */
+  transform: scale(1.05); /* Slight scale on hover for interactivity */
+}
+
+/* Reduced margin between signup button and copyright statement */
+.footer {
+  margin-top: 5px; /* Reduce margin to 5px (75% reduction from the previous margin) */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .signup-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    width: 90%; /* Increase form field width on smaller screens */
+  }
+
+  .form-row input {
+    font-size: 1rem;
+  }
+
+  .input-submit {
+    font-size: 1rem;
+    padding: 8px 16px;
+    width: 60%; /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signup-heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .form-row {
+    width: 90%; /* Adjust form width for very small screens */
+  }
+
+  .input-submit {
+    font-size: 1rem;
+    padding: 10px 18px;
+    width: 70%; /* Ensure button is large enough for smaller screens */
+  }
+
+  .signup-container {
+    padding: 0.2px;
+  }
+}

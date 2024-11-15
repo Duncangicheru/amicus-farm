@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Form Styles */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form .form-field {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #35424a;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #2c3e50;
+}
+
+/* Table Styles */
+.cow-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.cow-table th,
+.cow-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.cow-table th {
+  background: #35424a;
+  color: #ffffff;
+}
+
+.cow-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.cow-table tr:hover {
+  background: #eaeaea;
+}
+
+/* Button Styles */
+.add-cow-button {
+  background: #5cb85c;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-cow-button:hover {
+  background: #4cae4c;
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+
+  form {
+      padding: 15px;
+  }
+
+  .cow-table th,
+  .cow-table td {
+      padding: 8px;
+  }
+
+  form button {
+      width: 100%;
+  }
+}

@@ -1,0 +1,160 @@
+/* General styling */
+html, body {
+  height: 100%; /* Make sure the body and html element take up the full height of the window */
+  margin: 0; /* Remove default margin */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.login-container, .signup-container {
+  background-color: #D3A6E2; /* Light purple background */
+  background-size: cover; /* Ensure background image covers the full viewport */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Use the full height of the window */
+  text-align: center;
+  padding: 20px; /* Add some padding for better spacing on smaller screens */
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 105px; /* Reduced size by 30% */
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+h1 {
+  font-size: 1.75rem; /* Reduced size by 30% */
+  color: white;
+  margin-bottom: 2px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-size: 1.05rem; /* Reduced size by 30% */
+  color: white;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Limit the form width */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack the label and input vertically */
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 1rem; /* Adjust label size */
+  color: black;
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+footer {
+  margin-top: auto; /* Push footer to the bottom of the screen */
+  color: rgb(3, 0, 0);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Styling for the error message */
+.error {
+  color: rgb(153, 1, 1); /* Red color for error */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: #ffcccc; /* Light red background */
+}
+
+/* Additional responsive styles */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+  }
+
+  form {
+    width: 90%; /* Make form wider on smaller screens */
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input {
+    font-size: 1rem; /* Adjust input font size */
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem; /* Smaller font size for very small screens */
+  }
+
+  form {
+    width: 90%; /* Ensure form takes up 90% of the screen on small screens */
+    padding: 10px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    font-size: 1rem; /* Adjust input size for smaller screens */
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .logo {
+    width: 85px; /* Resize the logo on small devices */
+  }
+}

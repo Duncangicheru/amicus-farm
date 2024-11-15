@@ -1,0 +1,223 @@
+/* Livestock Management Layout */
+.livestock-management-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  transition: margin-left 0.3s ease-in-out;
+  background-color: #D3A6E2; /* Light purple background for the entire container */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Hide sidebar by default */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show sidebar when open */
+}
+
+.sidebar h2 {
+  padding: 16px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 16px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #ddd;
+}
+
+/* Hamburger Icon */
+.hamburger-menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #00fafa;
+  background-color: rgb(253, 253, 253);
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it appears above other elements */
+}
+
+/* Top Bar (Navigation Bar) */
+.top-bar {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px 0; /* Increased padding for height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.top-bar h1 {
+  font-size: 24px;
+  margin-bottom: 20px; /* Space between title and buttons */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  justify-content: center;
+}
+
+.nav-buttons a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.nav-buttons a:hover {
+  background-color: #45a049;
+}
+
+.dashboard-name {
+  margin-top: 30px; /* Increase space below the buttons */
+  font-size: 20px;
+}
+
+/* Main Content */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  overflow-y: auto;
+  background-color: #D3A6E2;
+  transition: background-color 0.3s ease-in-out;
+  padding-top: 120px; /* To avoid the content being hidden under the top bar */
+}
+
+/* Title Styles */
+.h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Breeds Section */
+.breeds-section {
+  margin-top: 150px; /* Space between button and breeds section increased by 3 times */
+}
+
+.breeds-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.breeds-section h2 {
+  font-size: 1.8rem;
+  margin-top: 110px; /* Added space between the paragraph and heading */
+}
+
+.breeds-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.breeds-section ul li {
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+
+.breeds-section ul li strong {
+  font-weight: bold;
+}
+
+.breeds-section ul li em {
+  font-style: italic;
+}
+
+/* Overview Button */
+.overview-button {
+  margin-bottom: 100%; /* Increase the space between the button and the following section */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 20%;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .livestock-management-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 10px;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 15;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,79 @@
+/* Container for the Edit Sheep form */
+.edit-sheep-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90vw; /* Occupies 90% of the viewport width */
+    margin: 0 auto;
+}
+
+/* Form styling */
+.edit-sheep-form {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping of fields to the next line */
+    gap: 2px; /* Reduced space between form fields */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    width: 90%; /* Form width matches container width */
+    justify-content: center; /* Center all items in the form */
+}
+
+/* Individual form field styling */
+.form-field {
+    display: flex; /* Enable flexbox for label and input */
+    align-items: center; /* Center align items vertically */
+    flex: 1 1 30%; /* Each field occupies 30% of the row */
+    margin: 2px; /* Reduced margin for fields */
+    min-width: 75px; /* Minimum width for fields to ensure readability */
+}
+
+/* Label styling */
+.form-field label {
+    display: inline-block; /* Allows labels to sit beside inputs */
+    margin-right: 8px; /* Space between label and input */
+    font-weight: bold;
+    color: #333;
+    width: 25%; /* Fixed width for labels to allow alignment */
+}
+
+/* Input field styling */
+.form-field input {
+    width: 75%; /* Input fields take up 75% of the form-field width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Centering the submit button */
+.submit-button {
+    margin-top: 10px; /* Adds some space above the button */
+    padding: 10px 20px; /* Adjusts padding for a better button appearance */
+    font-size: 16px; /* Font size for the button */
+    border: none; /* Removes the border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    cursor: pointer; /* Changes cursor on hover */
+}
+
+/* Optional: Button hover effect */
+.submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .form-field {
+        flex: 1 1 100%; /* Each field takes full width on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-field {
+        flex: 1 1 100%; /* Each field takes full width on small screens */
+    }
+}
